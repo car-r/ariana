@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import profilePic from '../public/headshot.jpg'
+// import profilePic from '../public/headshot.jpg'
 
 export default function HeroSection() {
     return (
@@ -22,7 +22,7 @@ export default function HeroSection() {
             </div>
             <div className="p-0 m-0">
                 <Image 
-                src={profilePic}
+                src={`/headshot.jpg`}
                 alt="ariana richter"
                 width={250}
                 height={325}
