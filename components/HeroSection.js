@@ -22,7 +22,7 @@ export default function HeroSection() {
             </div>
             <div className="p-0 m-0">
                 <Image 
-                src={`/headshot.jpg`}
+                src={`https://github.com/car-r/project-images/blob/main/headshot.JPG?raw=true`}
                 alt="ariana richter"
                 width={250}
                 height={325}
