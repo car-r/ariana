@@ -11,10 +11,10 @@ const Layout = ({ children }) => {
 
     return (
         <>
-            <div className="flex flex-col min-h-screen">
+            <div className="flex flex-col min-h-screen w-full">
                 <Navbar toggle={toggle} isOpen={isOpen}/>
                 <Sidebar toggle={toggle} isOpen={isOpen}/>
-                <main>{children}</main>
+                    <main>{children}</main>
                 <Footer />
             </div>
             
