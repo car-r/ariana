@@ -1,7 +1,7 @@
 export default function Accomplishments() {
     return (
-        <section className="w-full mx-auto py-32 dark:bg-black">
-            <h2 className="text-2xl md:text-3xl text-left w-11/12 max-w-6xl mx-auto mb-4 font-semibold">Accomplishments</h2>
+        <section className="w-full mx-auto py-44 dark:bg-black">
+            <h2 className="text-3xl md:text-3xl text-left w-11/12 max-w-6xl mx-auto mb-4 font-semibold">Accomplishments</h2>
             <div className="grid grid-cols-1 gap-6 w-11/12 max-w-6xl mx-auto md:grid-cols-2 lg:grid-cols-3">
                 <div className="flex flex-col border-2 border-gray-100 bg-gray-100 p-4 text-left shadow-sm rounded-lg dark:bg-black dark:border-stone-700">
                     <h3 className="text-xl font-medium mb-0.5">Certified Insurance Counselor</h3>

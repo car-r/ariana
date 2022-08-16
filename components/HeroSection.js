@@ -3,9 +3,9 @@ import Image from 'next/image'
 
 export default function HeroSection() {
     return (
-        <div className="items-center w-full mx-auto lg:flex justify-around py-20 text-black dark:bg-black dark:text-stone-300">
+        <div className="items-center w-full mx-auto lg:flex justify-around py-36 text-black dark:bg-black dark:text-stone-300">
             <div className="text-center flex flex-col mb-8 lg:mr-10 lg:mb-0 lg:text-left justify-center">
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
+                <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold mb-4">
                 {`Hi, I'm Ariana.`}
                 </h1>
                 <h3 className="text-xl lg:text-2xl mb-2 lg:mb-0">
@@ -16,7 +16,7 @@ export default function HeroSection() {
                 </h2>
                 <a href="https://www.linkedin.com/in/arianarichter24" 
                 className="border-2 border-gray-400 mb-2 py-3 w-10/12 max-w-lg mx-auto lg:w-5/12 lg:mx-0 lg:mb-0 hover:text-white  hover:bg-gray-400 rounded-lg bg-gray-50 text-black  transition ease-in duration-200 text-center
-                ">
+                dark:hover:bg-stone-700">
                 <button className="font-bold tracking-wider">Connect with me</button>
                 </a>
             </div>
