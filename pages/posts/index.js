@@ -13,7 +13,7 @@ export async function getStaticProps() {
 export default function postsIndex({ posts }) {
     return (
         <div className="w-11/12 max-w-6xl mx-auto">
-            <div className="my-12">
+            <div className="my-12 flex flex-col gap-7">
                 {posts.map(({ title, date, description, featureImage, slug, youTubeLink }) => (
                     <PostCard 
                         key={slug} 
