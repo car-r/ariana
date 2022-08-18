@@ -14,7 +14,7 @@ export default function HeroSection() {
                 <h2 className="lg:text-lg font-thin mb-4 tracking-wide">
                 {`I'm here to build long lasting relationships with clients`}
                 </h2>
-                <a href="https://www.linkedin.com/in/arianarichter24" 
+                <a href="https://www.linkedin.com/in/arianarichter24" target={`_blank`} 
                 className="border-2 border-gray-400 mb-2 py-3 w-10/12 max-w-lg mx-auto lg:w-5/12 lg:mx-0 lg:mb-0 hover:text-white  hover:bg-gray-400 rounded-lg bg-gray-50 text-black  transition ease-in duration-200 text-center
                 dark:hover:bg-stone-700">
                 <button className="font-bold tracking-wider">Connect with me</button>
