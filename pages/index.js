@@ -7,6 +7,7 @@ import Skills from '../components/Skills'
 import styles from '../styles/Home.module.css'
 
 import { getPosts } from "../lib/data"
+import Separator from '../components/Separator'
 
 export async function getStaticProps() {
     const posts = await getPosts()
@@ -28,8 +29,11 @@ export default function Home({posts}) {
 
       <main className="flex flex-col w-full flex-1 text-center bg-white ">
         <HeroSection />
+        <Separator />
         <Skills />
+        <Separator />
         <Accomplishments />
+        <Separator />
         <ContentCarousel posts={posts}/>
       </main>
     </div>

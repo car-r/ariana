@@ -7,7 +7,11 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'separator': "url('https://pxdraft.com/themeforest/nairo/nairo/static/img/border.png')",
+      }
+    },
     screens: {
       'xs': '500px',
       'sm': '640px',

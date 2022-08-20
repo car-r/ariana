@@ -9,7 +9,7 @@ import Link from "next/link"
 export default function ContentCarousel({posts}) {
     console.log(posts)
     return (
-        <div className="w-full flex flex-col bg-gray-100 dark:bg-stone-900 py-40">
+        <div className="w-full flex flex-col bg-gray-100 dark:bg-black py-40">
             <h2 className="text-3xl md:text-3xl text-center w-11/12 max-w-6xl mx-auto mb-6 font-semibold">
                 Recent Posts
             </h2>
