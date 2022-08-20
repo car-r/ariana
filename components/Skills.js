@@ -13,21 +13,21 @@ export default function Skills() {
               <ClipboardListIcon 
                 className="h-8 w-8 mb-1 "
               />
-              <h3 className="text-2xl mb-2 font-medium">Sales</h3>
-              <p className="text-base font-light">Drive new business growth by leveraging digital marketing and video content to gain trust with my clients.</p>
+              <h3 className="text-2xl mb-2 font-semibold">Sales</h3>
+              <p className="text-base font-light">Drive new business growth by leveraging digital marketing and video content to gain trust with my clients. Uncover client pain points with deep dive discussion and annual planning.</p>
             </div>
             <div className="flex flex-col border-2 border-white bg-white text-left p-6 rounded-xl shadow-sm dark:bg-stone-900 dark:border-stone-700">
               <BriefcaseIcon 
                 className="h-8 w-8 mb-1"
               />
-              <h3 className="text-2xl mb-2 font-medium">Business Development</h3>
+              <h3 className="text-2xl mb-2 font-semibold">Business Development</h3>
               <p className="text-base font-light">Cultivate relationships and obtain an in-depth understanding of their needs while embedding them across the entire product suite.</p>
             </div>
             <div className="flex flex-col border-2 border-white bg-white text-left p-6 rounded-xl shadow-sm dark:bg-stone-900 dark:border-stone-700">
               <VideoCameraIcon 
                 className="h-8 w-8 mb-1"
               />
-              <h3 className="text-2xl mb-2 font-medium">Marketing</h3>
+              <h3 className="text-2xl mb-2 font-semibold">Marketing</h3>
               <p className="text-base font-light">Dove head first into the remote working environment by starting a YouTube Channel and creating video content to reach my clients across multiple social media platforms.</p>
             </div>
           </div>

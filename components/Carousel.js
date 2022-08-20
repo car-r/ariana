@@ -13,11 +13,11 @@ export default function ContentCarousel({posts}) {
             <h2 className="text-3xl md:text-3xl text-center w-11/12 max-w-6xl mx-auto mb-6 font-semibold">
                 Recent Posts
             </h2>
-            <div className="mx-auto relative w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 h-52 xs:h-72 sm:h-80 md:h-96">
+            <div className="mx-auto relative w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 rounded-xl">
                 <Carousel>
                     {posts.map((post) => (
                         <Link href={`/posts/${post.slug}`} key={post.slug}>
-                            <Image  alt={post.title} src={post.featureImage.url} layout="fill" className=" object-cover h-96"/>
+                            <Image  alt={post.title} src={post.featureImage.url} width='1080' height='720' className="object-cover rounded-xl"/>
                         </Link>
                     ))}
                 </Carousel>
