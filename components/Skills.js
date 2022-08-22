@@ -1,4 +1,4 @@
-import { skillsArr } from '../lib/skills'
+import { skillsArr } from '../lib/content'
 import SkillsCard from './SkillsCard'
 
 export default function Skills() {
