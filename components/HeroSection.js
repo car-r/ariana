@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function HeroSection() {
     return (
-        <div className="items-center w-full mx-auto lg:flex justify-around py-36 text-black dark:bg-black dark:text-stone-300">
+        <div className="items-center w-full mx-auto lg:flex justify-around py-40 text-black dark:bg-black dark:text-stone-300">
             <div className="text-center flex flex-col mb-8 lg:mr-10 lg:mb-0 lg:text-left justify-center">
                 <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold mb-4">
                 {`Hi, I'm Ariana.`}
