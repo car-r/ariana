@@ -11,9 +11,9 @@ export default function PostCard({ title, date, description, featureImage, slug,
                 <Image 
                     src={featureImage.url}
                     alt={title}
-                    className="rounded-lg"
+                    className="rounded-lg object-cover"
                     width='1080'
-                    height='600'
+                    height='720'
                 />
             </a>
             <div className="mt-2 flex flex-col lg:pl-7 lg:mt-4 mb-2">

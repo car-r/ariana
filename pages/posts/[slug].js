@@ -65,13 +65,13 @@ export default function PostDetails({ post }) {
         <div className='mx-auto w-10/12 lg:max-w-4xl my-12 flex flex-col'>
             <h1 className="my-2 text-xl font-semibold md:text-2xl lg:text-4xl">{post.title}</h1>
             <p className='mb-4 font-light text-sm'>{post.date}</p>
-            <a href={post.youTubeLink} className='mb-6'>
+            <a href={post.youTubeLink} className='mb-6' target={`_blank`}>
                 <Image 
                     src={post.featureImage.url}
                     alt={post.title}
-                    className="rounded-lg"
+                    className="rounded-lg object-cover"
                     width='1080'
-                    height='600'
+                    height='720'
                 />
             </a>
             {/* <article className=''>
