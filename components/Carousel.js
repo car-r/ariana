@@ -3,9 +3,6 @@ import Image from "next/image"
 import Link from "next/link"
 
 
-{/* <img src="/brl.png"/>
-<img src="/headshot.jpg"/> */}
-
 export default function ContentCarousel({posts}) {
     console.log(posts)
     return (

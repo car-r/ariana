@@ -6,7 +6,7 @@ export default function Accomplishments() {
                 <div className="flex flex-col border-2 border-gray-100 bg-gray-100 p-4 text-left shadow-sm rounded-lg dark:bg-black dark:border-stone-700">
                     <h3 className="text-xl font-medium mb-0.5">Certified Insurance Counselor</h3>
                     <p className="text-sm font-thin mb-2">July 2021</p>
-                    <p className="font-light">National Alliance for Insurance Education & Research</p>
+                    <p className="font-light">National Alliance for Insurance Education and Research</p>
                 </div>
                 <div className="flex flex-col border-2 border-gray-100 bg-gray-100 p-4 text-left shadow-sm rounded-lg dark:bg-black dark:border-stone-700">
                     <h3 className="text-xl font-medium mb-0.5">2021 Class of Emerging Leaders</h3>
