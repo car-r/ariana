@@ -32,8 +32,8 @@ const Sidebar = ({toggle, isOpen}) => {
 
     return (
         <div className={
-            isOpen ? `bg-gray-200 dark:bg-stone-900 min-h-screen absolute z-50 w-10/12 px-2 transform transition duration-200 ease-in-out md:hidden` 
-            : `bg-gray-200 min-h-screen absolute z-50 w-10/12 px-2 inset-y-0 left-0 transform -translate-x-full transition duration-200 ease-in-out md:hidden`
+            isOpen ? `bg-gray-200 dark:bg-stone-900 min-h-screen fixed z-50 w-10/12 px-2 transform transition duration-200 ease-in-out md:hidden` 
+            : `bg-gray-200 min-h-screen fixed z-50 w-10/12 px-2 inset-y-0 left-0 transform -translate-x-full transition duration-200 ease-in-out md:hidden`
             }
             onClick={toggle}
             >
