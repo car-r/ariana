@@ -1,9 +1,9 @@
 export default function AccomplishmentCard({ accomplishment }) {
     return (
-        <div className="flex flex-col border-2 border-gray-100 bg-gray-100 p-4 text-left shadow-sm rounded-lg dark:bg-black dark:border-stone-700">
-            <h3 className="text-xl font-medium mb-0.5">{accomplishment.title}</h3>
-            <p className="text-sm font-thin mb-2">{accomplishment.date}</p>
-            <p className="font-light">{accomplishment.association}</p>
+        <div className="flex flex-col text-left py-3 border-t border-gold/40">
+            <h3 className="font-serif text-xl font-medium mb-0.5 text-charcoal dark:text-stone-200">{accomplishment.title}</h3>
+            <p className="text-sm font-normal mb-2 text-gold-dark dark:text-gold-light">{accomplishment.date}</p>
+            <p className="font-normal text-charcoal-muted dark:text-stone-400">{accomplishment.association}</p>
         </div>
     )
 }

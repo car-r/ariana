@@ -3,16 +3,23 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
-    @apply bg-gray-50 text-gray-900 dark:bg-black dark:text-stone-300;
-    @apply min-h-screen;
+    @apply bg-cream text-charcoal dark:bg-black dark:text-stone-300;
+    @apply min-h-screen font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
   }
 
   ::selection {
-    @apply text-white bg-indigo-500;
+    @apply text-white bg-gold;
   }
 
-  
   .btn{
     @apply inline-block px-5 py-3 rounded-lg hover:bg-indigo-600 transition duration-300 shadow-lg bg-indigo-500 text-white capitalize tracking-wider font-semibold text-sm sm:text-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 whitespace-nowrap
   }
