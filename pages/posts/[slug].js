@@ -13,34 +13,41 @@ export async function getStaticProps({ params }) {
     if (!graphcms) {
         return { notFound: true }
     }
-    const { post } = await graphcms.request(
-        `
-            query PostPageQuery($slug: String!) {
-                post(where: {slug: $slug}) {
-                    youTubeLink
-                    title
-                    slug
-                    date
-                    content {
-                        html
-                        markdown
-                        raw
-                    }
-                    featureImage {
-                        url
+    try {
+        const { post } = await graphcms.request(
+            `
+                query PostPageQuery($slug: String!) {
+                    post(where: {slug: $slug}) {
+                        youTubeLink
+                        title
+                        slug
+                        date
+                        content {
+                            html
+                            markdown
+                            raw
+                        }
+                        featureImage {
+                            url
+                        }
                     }
                 }
+            `,
+            {
+                slug: params.slug,
             }
-        `,
-        {
-            slug: params.slug,
+        )
+        if (!post) {
+            return { notFound: true }
         }
-    )
-    return {
-        props: {
-            post,
-        },
-        revalidate: 10,
+        return {
+            props: {
+                post,
+            },
+            revalidate: 10,
+        }
+    } catch (err) {
+        return { notFound: true }
     }
 }
 
@@ -48,21 +55,25 @@ export async function getStaticPaths() {
     if (!graphcms) {
         return { paths: [], fallback: false }
     }
-    const { posts } = await graphcms.request(
-        `
-        query MyQuery {
-            posts {
-              slug
-            }
-          }
-        `
-    )
+    try {
+        const { posts } = await graphcms.request(
+            `
+            query MyQuery {
+                posts {
+                  slug
+                }
+              }
+            `
+        )
 
-    return {
-        paths: posts.map(({ slug }) => ({
-            params: { slug },
-        })),
-        fallback: false,
+        return {
+            paths: posts.map(({ slug }) => ({
+                params: { slug },
+            })),
+            fallback: false,
+        }
+    } catch (err) {
+        return { paths: [], fallback: false }
     }
 }
 
