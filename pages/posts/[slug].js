@@ -6,10 +6,13 @@ import Link from 'next/link';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 
 
-const graphcms = new GraphQLClient(`https://api-us-west-2.graphcms.com/v2/${process.env.NEXT_PUBLIC_KEY}/master`)
+const KEY = process.env.NEXT_PUBLIC_KEY
+const graphcms = KEY ? new GraphQLClient(`https://api-us-west-2.graphcms.com/v2/${KEY}/master`) : null
 
 export async function getStaticProps({ params }) {
-    // console.log(params)
+    if (!graphcms) {
+        return { notFound: true }
+    }
     const { post } = await graphcms.request(
         `
             query PostPageQuery($slug: String!) {
@@ -42,6 +45,9 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
+    if (!graphcms) {
+        return { paths: [], fallback: false }
+    }
     const { posts } = await graphcms.request(
         `
         query MyQuery {
