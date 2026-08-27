@@ -1,9 +1,11 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import {useTheme} from "next-themes"
 import {useState, useEffect} from "react"
 import{SunIcon ,MoonIcon} from "@heroicons/react/solid"
 
 const Sidebar = ({toggle, isOpen}) => {
+    const router = useRouter()
     const [mounted, setMounted] = useState(false);
     const {systemTheme , theme, setTheme} = useTheme ();
 
@@ -29,6 +31,13 @@ const Sidebar = ({toggle, isOpen}) => {
       }
    }
 
+    const itemClass = (href) => {
+        const active = router.pathname === href
+        return `h-10 px-4 flex items-center text-xl rounded-lg hover:bg-cream-200 dark:hover:bg-stone-700 hover:-translate-y-0.5 transition-all ease-in-out ${
+            active ? 'text-gold-dark dark:text-gold-light' : ''
+        }`
+    }
+
     return (
         <div className={
             isOpen ? `bg-cream dark:bg-stone-900 min-h-screen fixed z-50 w-10/12 px-2 transform transition duration-200 ease-in-out md:hidden`
@@ -36,18 +45,24 @@ const Sidebar = ({toggle, isOpen}) => {
             }
             onClick={toggle}
             >
-            <div className="font-serif text-2xl font-semibold tracking-[0.12em] py-4 px-4">
+            <div className="relative font-serif text-2xl font-semibold tracking-[0.12em] py-4 px-4">
                 <Link href="/">AR</Link>
+                <span className="absolute left-[27px] top-[27px] h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true" />
             </div>
             <nav className="">
                 <div className="grid grid-cols-1 gap-4">
+                    <Link href="/">
+                        <a className={itemClass('/')}>
+                            Home
+                        </a>
+                    </Link>
                     <Link href="/about">
-                        <a className="h-10 px-4 flex items-center text-xl rounded-lg hover:bg-cream-200 dark:hover:bg-stone-700 hover:-translate-y-0.5 transition-all ease-in-out">
+                        <a className={itemClass('/about')}>
                             About
                         </a>
                     </Link>
                     <Link href="/resume">
-                        <a className="h-10 px-4 flex items-center text-xl rounded-lg hover:bg-cream-200 dark:hover:bg-stone-700 hover:-translate-y-0.5 transition-all ease-in-out">
+                        <a className={itemClass('/resume')}>
                             Resume
                         </a>
                     </Link>
